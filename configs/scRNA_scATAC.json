@@ -1,0 +1,34 @@
+{
+  "train": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+    "atac_h5ad": "/binarize_True_filter_True_fpeaks_0.02_tfidf_True_normalize_True_ATAC_processed_data.h5ad",
+    "model_save_path": "/Results",
+    "log_dir": "/Results/logs",
+    "batch_size": 64,
+    "num_workers": 20,
+    "n_epoch": 500,
+    "eval_freq": 1,
+    "n_embeddings": 400,
+    "scRNA_dim": 256,
+    "scATAC_dim": 256,
+    "scRNA_encoder_output_dim": 128,
+    "scATAC_encoder_output_dim": 128,
+    "projection_dim": 64,
+    "cpc_dim": 64,
+    "scRNA_mi_lr": 0.1,
+    "scATAC_mi_lr": 0.1,
+    "lr": 0.0004,
+    "rna_distribution": "zin"
+  },
+  "infer": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+    "atac_h5ad": "/binarize_True_filter_True_fpeaks_0.02_tfidf_True_normalize_True_ATAC_processed_data.h5ad",
+    "checkpoint_path": "/Results/pretrained-model.pt",
+    "output_dir": "/Results",
+    "batch_size": 64
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "train": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/hum_rna_processed.h5ad",
+    "ribo_h5ad": "/hum_ribo_processed.h5ad",
+    "model_save_path": "/Results_saving",
+    "log_dir": "/Results_saving/logs",
+    "batch_size": 64,
+    "num_workers": 20,
+    "n_epoch": 500,
+    "eval_freq": 1,
+    "n_embeddings": 400,
+    "scRNA_encoder_output_dim": 128,
+    "scRibo_encoder_output_dim": 128,
+    "projection_dim": 64,
+    "cpc_dim": 64,
+    "scRNA_mi_lr": 0.1,
+    "scRibo_mi_lr": 0.1,
+    "lr": 0.0004
+  },
+  "infer": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/hum_rna_processed.h5ad",
+    "ribo_h5ad": "/hum_ribo_processed.h5ad",
+    "checkpoint_path": "/Results_saving/pretrained-model.pt",
+    "output_dir": "/Results_saving/All_datasets",
+    "batch_size": 64
+  }
+}

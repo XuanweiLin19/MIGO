@@ -1,0 +1,15 @@
+anndata
+h5py
+matplotlib
+numpy
+pandas
+scanpy
+scikit-learn
+scipy
+tensorboard
+torch
+tqdm
+scib
+umap-learn
+seaborn
+gensim

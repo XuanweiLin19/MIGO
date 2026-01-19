@@ -1,0 +1,33 @@
+{
+    "resolution":  "1M",
+    "train":  {
+                  "device":  "cuda:0",
+                  "rna_h5ad":  "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+                  "hic_h5ad":  "/higashi_hic_emb_data.h5ad",
+                  "train_batch_size":  64,
+                  "val_batch_size":  64,
+                  "n_epoch":  500,
+                  "eval_freq":  1,
+                  "warmup_epochs":  20,
+                  "cross_modal_target_weight":  2.0,
+                  "model_save_path":  "/Results",
+                  "log_dir":  "/Results/logs",
+                  "lr":  5E-06,
+                  "scRNA_mi_lr":  0.0005,
+                  "scHiC_mi_lr":  0.0005,
+                  "weight_decay":  0.0001
+              },
+    "infer":  {
+                  "device":  "cuda:0",
+                  "rna_h5ad":  "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+                  "hic_h5ad":  "/higashi_hic_emb_data.h5ad",
+                  "batch_size":  64,
+                  "checkpoint_path":  "/Results/chr1/pretrained-model.pt",
+                  "output_dir":  "/Results/chr1",
+                  "merge_size":  30,
+                  "min_cells":  30,
+                  "val_drop_last":  false,
+                  "strict_load":  false,
+                  "decay_curve_filename_template":  "decay_curve_{group_name}_with_metrics.png"
+              }
+}

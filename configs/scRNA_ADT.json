@@ -1,0 +1,31 @@
+{
+  "train": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+    "adt_h5ad": "/processed_ADT.h5ad",
+    "model_save_path": "/MIGO_scRNA_ADT_Test/Results",
+    "log_dir": "/MIGO_scRNA_ADT_Test/Results/logs",
+    "batch_size": 1024,
+    "num_workers": 20,
+    "n_epoch": 500,
+    "eval_freq": 1,
+    "n_embeddings": 1024,
+    "scRNA_encoder_output_dim": 128,
+    "scADT_encoder_output_dim": 128,
+    "projection_dim": 64,
+    "cpc_dim": 64,
+    "scRNA_mi_lr": 0.1,
+    "scADT_mi_lr": 0.1,
+    "lr": 0.0004
+  },
+  "infer": {
+    "seed": 0,
+    "device": "cuda:0",
+    "rna_h5ad": "/normalize_True_log1p_True_hvg_True_3000_RNA_processed_data.h5ad",
+    "adt_h5ad": "/processed_ADT.h5ad",
+    "checkpoint_path": "/MIGO_scRNA_ADT_Test/Results/pretrained-model.pt",
+    "output_dir": "/MIGO_scRNA_ADT_Test/Results",
+    "batch_size": 1024
+  }
+}
