@@ -1,9 +1,6 @@
-# MIGO Unified
+# MIGO
 
-MIGO_unified is a clean, unified project layout for scRNA_scATAC, scRNA_ADT, RNA_Ribo_seq, and scRNA_scHiC.
-Shared code lives in `migo/model/` and `migo/utils_/`. Task-specific code lives under `migo/tasks/<task>/`,
-with task-specific `layer` and `pretrain` kept separate per task. Training and inference use unified entrypoints
-backed by a central registry.
+MIGO project layout for scRNA_scATAC, scRNA_ADT, RNA_Ribo_seq, and scRNA_scHiC.
 
 ## Project layout
 - `migo/` core package
