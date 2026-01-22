@@ -1,6 +1,6 @@
 # MIGO
 
-MIGO project layout for scRNA_scATAC, scRNA_ADT, RNA_Ribo_seq, and scRNA_scHiC.
+Mapping information flow along the central dogma across genome topology, epigenetic states, transcription, and protein abundance has revealed cellular heterogeneity and biological function. However, existing multi-omics sequencing approaches capture only limited modalities in each experiment, failing to profile the full spectrum simultaneously. A further challenge lies in learning universal representations that integrate these disparate data. Here, we present MIGO, a unified generative framework that models five modalities including scRNA-seq, scATAC-seq, scHi-C, ribosome profiling, and protein abundance within a single architecture. MIGO leverages mutual information to learn biological states and maps them into a discrete, shared space using vector quantization. Evaluated on 20 datasets, MIGO demonstrates superior performance in cross-modality generation, batch effect correction, higher-order regulatory units identification, and marker protein discovery. Notably, MIGO is advanced in generating high-resolution three-dimension (3D) chromatin contact maps from scRNA-seq alone. In addition, we dissect cell type-specific translation in human peripheral blood mononuclear cells. Together, MIGO is flexible for cross-modality generation and constructs a virtual space for further AI virtual cells (AIVCs) development.
 
 ## Project layout
 - `migo/` core package
